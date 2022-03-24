@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>context-config-demo</display-name>
+  <display-name>session-demo</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>one.html</welcome-file>
   </welcome-file-list>
-  <context-param>
-    <param-name>driver</param-name>
-    <param-value>sql.oracle.jdbc.driver</param-value>
-  </context-param>
-  <context-param>
-    <param-name>url</param-name>
-    <param-value>sql.jdbc:localhost</param-value>
-  </context-param>
   <servlet>
     <description></description>
     <display-name>FirstServlet</display-name>
     <servlet-name>FirstServlet</servlet-name>
     <servlet-class>com.FirstServlet</servlet-class>
-    <init-param>
-      <param-name>sql</param-name>
-      <param-value>select * from mytable</param-value>
-    </init-param>
-    <init-param>
-      <param-name>message</param-name>
-      <param-value>Hello from FirstServlet</param-value>
-    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>FirstServlet</servlet-name>
@@ -39,5 +23,15 @@
   <servlet-mapping>
     <servlet-name>SecondServlet</servlet-name>
     <url-pattern>/SecondServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ThirdServlet</display-name>
+    <servlet-name>ThirdServlet</servlet-name>
+    <servlet-class>com.ThirdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ThirdServlet</servlet-name>
+    <url-pattern>/ThirdServlet</url-pattern>
   </servlet-mapping>
 </web-app>
