@@ -1,13 +1,6 @@
-import javax.persistence.*;
 
-@Entity
-@Table(name = "EMPLOYEE")
 public class Employee {
-	@Id @GeneratedValue
-	@Column(name = "id")
 	private int id;
-	
-	@Column(name = "Name")
 	private String name;
 	
 	public int getId() {

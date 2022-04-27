@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/animations.js"></script>
+    <title>Register</title>
+</head>
+<body style="background: url('background.jpg');background-size: cover;background-attachment: fixed;">
+    <div class="container" id="registerMenu">
+        <h1 class="myHeading"> REGISTER </h1>
+        <div id = "error"></div>
+        <form method="post" action="RegisterDAO" id="registerForm">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="registeremail" type="text" class="form-control" name="registeremail" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="registerpassword" type="password" class="form-control" name="registerpassword" placeholder="Password" maxlength="20">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="name" type="text" class="form-control" name="name" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-flag fa-fw"></i></span>
+                <select class="form-control" id = "country" name="country">
+                    <option value="None">--Select Country--</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="address" type="text" class="form-control" name="address" placeholder="Address">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="age" type="number" class="form-control" name="age" placeholder="Age" value="0">
+            </div>
+            <button type="submit" class="register btn"> <i class="fa fa-sign-in fa-fw"></i> Register </button>
+        </form>
+        <a class="showLogin btn login" href="login.html">Click Here to Login</a>
+        <a class="register btn" href="index.html"> <i class="fa fa-home fa-fw"></i> Click Here to go to Home</a>
+    </div>
+</body>
+</html>

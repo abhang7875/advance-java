@@ -39,5 +39,9 @@
 	request - HttpServletRequest
 	response - HttpServletResponse
 	 --%>
+	 <form action="other.jsp">
+	 <input type="text" name="sname">
+	 <input type="submit" value="Submit">
+	 </form>
 </body>
 </html>

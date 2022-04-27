@@ -12,7 +12,7 @@
 		<property name="connection.password">root</property>
 		<property name="dialect">org.hibernate.dialect.Oracle8iDialect</property>
 		<property name="show_sql">true</property>
-		<property name="hbm2ddl.auto">update</property>
-		<mapping class="Employee"></mapping>
+		<property name="hbm2ddl.auto">create</property>
+		<mapping resource="Employee.hbm.xml"></mapping>
 	</session-factory>
 </hibernate-configuration>
