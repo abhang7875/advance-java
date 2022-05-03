@@ -1,7 +1,6 @@
 package com.dao;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +22,8 @@ public class RedirectDAO extends HttpServlet {
 		session.setAttribute("flightID", request.getParameter("id"));
 		if(user == null) {
 			request.getRequestDispatcher("login.html").forward(request, response);
+		}else {
+			request.getRequestDispatcher("booking.jsp").forward(request, response);			
 		}
 	}
 

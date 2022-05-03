@@ -24,7 +24,8 @@ public class LoginDAO extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		if(request.getSession(false).getAttribute("flightID")!=null) {
+		HttpSession s = request.getSession();
+		if(s.getAttribute("flightID")!=null) {
 			request.getRequestDispatcher("booking.jsp").forward(request, response);
 			return;
 		}
